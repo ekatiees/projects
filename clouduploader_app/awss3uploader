@@ -1,0 +1,106 @@
+#!/bin/bash
+
+create_bucket() {
+	##### Set bucket name #####################################
+	read -p "Please, enter a bucket name: " bucket_name	
+	
+	##### Set region ##########################################
+	read -p "Do you want to use the default region for the bucket? [y/n]: " default_region_agree
+	# --- input check ---
+	local i=1
+	until [[ "$default_region_agree" == "y" || "$default_region_agree" == "n" ]]; do
+		i=$((i+1))
+		if [[ $i == 6 ]]; then
+			echo "You have provided invalid input 5 times. Please, try to start from the beginning."
+			exit
+		fi
+		read -p "Please enter 'y' (yes) or 'n' (no) as an answer to the question: " default_region_agree
+	done
+	# --- --- --- --- ---
+	
+	## If "n" ask for another region, if "y" set the defaul region
+	if [[ "$default_region_agree" == "n" ]]; then
+		echo -e "\nAvailable regions:\n$(aws ec2 describe-regions --query "Regions[].{Name:RegionName}" --output text)\n"
+		read -p "Please, provide the name of the region you want to create your bucket in: " region_input
+		
+		# --- input check ---
+		local j=1
+		until [[ $(aws ec2 describe-regions --query "Regions[].{Name:RegionName}" --output text) == *"$region_input"* ]]; do
+			j=$((i+1))
+			if [[ $j == 6 ]]; then
+				echo "You have provided invalid input 5 times. Please, try to start from the beginning."
+				exit
+			fi
+			read -p "Region $region_input does not exist. Please, provide correct region name: " region_input
+		done
+		# --- --- --- --- ---
+		region=$region_input
+	else
+		region=$(aws configure get region)
+	fi
+	
+	##### Create a bucket #####################################
+	aws s3 mb s3://$bucket_name --region $region
+}
+
+choose_bucket() {
+	##### Choose a bucket from existing #######################
+	read -p "Enter the name of the bucket you want to upload files to: " bucket_name
+	local i=1
+	until [[ $(aws s3api list-buckets --query "Buckets[].Name") == *"$bucket_name"* ]]; do
+		i=$((i+1))
+		if [[ $i == 6 ]]; then
+			echo "You have provided invalid input 5 times. Please, try to start from the beginning."
+			exit
+		fi
+		read -p "Bucket $bucket_name does not exist. Please, provide correct bucket name: " bucket_name
+	done
+}
+
+upload() {
+	##### Set a path to source ################################
+	read -p "Please, enter the path to the source file/directory: " path_to_source
+	# --- input check ---
+	local i=1
+	until [[ -f $path_to_source || -d $path_to_source ]]; do
+		i=$((i+1))
+		if [[ $i == 6 ]]; then
+			echo "You have provided invalid input 5 times. Please, try to start from the beginning."
+			exit
+		fi
+		read -p "The file or directory does not exist. Please, provide another path: " path_to_source
+	done
+	# --- --- --- --- ---
+	
+	##### Upload files to S3 ##################################
+	[[ -d $path_to_source ]] && aws s3 cp $path_to_source s3://$bucket_name --recursive || aws s3 cp $path_to_source s3://$bucket_name
+}
+
+exec_uploader() {
+	read -p "Create a new bucket? [y/n]: " create_bucket_agree
+	# --- input check ---
+	local i=1
+	until [[ "$create_bucket_agree" == "y" || "$create_bucket_agree" == "n" ]]; do
+		i=$((i+1))
+		if [[ $i == 6 ]]; then
+			echo "You have provided invalid input 5 times. Please, try to start from the beginning."
+			exit
+		fi
+		read -p "Please enter 'y' (yes) or 'n' (no) as an answer to the question: " create_bucket_agree
+	done
+	# --- --- --- --- ---
+
+	if [[ "$create_bucket_agree" == "y" ]]; then
+		create_bucket
+		# --- error check ---
+		until [[ $? -eq 0 ]]; do create_bucket;	done
+		# --- --- --- --- ---
+		upload
+	else
+		choose_bucket
+		upload
+	fi
+}
+
+exec_uploader
+[[ $? == 0 ]] && echo "The files have been successfully uploaded."
