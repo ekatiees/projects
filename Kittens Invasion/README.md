@@ -1,33 +1,33 @@
 <div align=center margin= auto> 
-  <img src="img.png"  width=80%>
+  <img src="images/sample.png"  width=100%>
 </div>
 
-# 👽 Alien Invasion
-Alien invasion is a clone of popular arcade game with same name.
+# 😺 Kittens Invasion
+Kittens Invasion is a clone of the popular arcade game Alien Invasion.
 I created this game by following the "Python Crash Course" book. The reason was to improve my python skills.
 
 ## 🚀 Introduction
-> In Alien Invasion, the player controls a ship that appears at
-the bottom center of the screen. The player can move the ship
-right and left using the arrow keys and shoot bullets using the
-spacebar. When the game begins, a fleet of aliens fills the sky
-and moves across and down the screen. The player shoots and
-destroys the aliens. If the player shoots all the aliens, a new fleet
-appears that moves faster than the previous fleet. If any alien hits
-the player’s ship or reaches the bottom of the screen, the player
-loses a ship. If the player loses three ships, the game ends.
+> In Kittens Invasion, the player controls a plate with fish that
+appears at the bottom centre of the screen. The player can move
+the plate to the right and left using the arrow keys and shoot fish
+using the spacebar. When the game begins, a squad of kittens appears
+and moves across and down the screen. The player throws fish and
+feeds the kittens. If the player feeds all the kittens, a new squad
+will appear and move faster than the previous one. If any kitten hits
+the player’s plate or reaches the bottom of the screen, the player
+loses a plate. If the player loses three plates, the game ends.
 
 ## 🔧 Requeriments
 - [Python](https://www.python.org/) 3.x +
 - [Pygame](https://www.pygame.org/)
 
-## :video_game: Controls
+## 🎮 Controls
 
-- Space-bar
-  - Shoot
+- Spacebar
+  - Throw a fish
 
-- Arrows keys (left - right)
-  - Move the ship left / right
+- Arrows keys (left / right)
+  - Move the plate left / right
 
 ## ⚔ Let's play
 
