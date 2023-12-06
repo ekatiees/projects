@@ -34,15 +34,15 @@ loses a plate. If the player loses three plates, the game ends.
 ### Cloning the Repository
 
 ```
-$ git clone https://github.com/bryanlds/Alien-Invasion.git
+$ git clone https://github.com/ekatiees/projects/tree/main/Kittens%20Invasion
 
-$ cd Alien-Invasion
+$ cd "Kittens Invasion"
 ```
 
 ### Running 
 
 ```
-$ python alien_invasion.py
+$ python kittens_invasion.py
 ``` 
 
 Enjoy!
