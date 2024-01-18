@@ -1,0 +1,287 @@
+body {
+    min-width: 1440px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #404040;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.main_content {
+    flex: 1;
+}
+
+.container {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header, .page-footer {
+    background-color: #DCC9B5;
+    min-width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15%;
+    height: 130px;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0 0 0 50px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.my_reserve {
+    display: block;
+    background-color: #404040;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 13px 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin: 0 15%;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #404040;
+    background-image: url("img/sprite.png");
+    background-repeat: no-repeat;
+}
+
+.social-btn:active {
+    border-color: #848484;
+    opacity: 0.1;
+}
+
+.social-btn-vk {
+    background-position: 16px -238px;
+}
+
+.social-btn-fb {
+    background-position: 19px -297px;
+}
+
+.social-btn-in {
+    background-position: 13px -358px;
+}
+
+.footer-copyright {
+    float: right;
+    width: 340px;
+    margin-top: 0px;
+}
+
+.footer-text {
+    margin-right: 20px;
+}
+
+
+/* RESTAURANT_LIST */
+
+.restaurant-list, .reservations {
+    margin: 50px 15%;
+}
+
+.restaurant-list dl {
+    border: solid 1px #bbbbbb;
+    padding: 10px 30px;
+    display: flex;
+}
+
+.restaurant-desc {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    margin-right: 30px;
+    border-right: solid 1px #bbbbbb;
+}
+
+.restaurant-btn {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-btn a {
+    display: block;
+    background-color: #404040;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 13px 20px;
+    text-align: center;
+}
+
+.restaurant-list dt {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-attributes {
+    display: flex;
+}
+
+.restaurant-attributes p {
+    margin: 0 30px 0 0;
+    font-weight: 500;
+}
+
+.restaurant-list dd {
+    margin: 0;
+}
+
+
+/* RESTAURANT-PAGE */
+
+.restaurant-main-content {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.restaurant-description {
+    margin: 50px 30px 0 15%;
+}
+
+.restaurant-photo {
+    margin: 70px 15% 0 0;
+    width: 30%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reservation-main-content, .restaraunt-map {
+    margin: 0 15% 70px;
+    
+}
+
+.reservation-form label {
+    display: block;
+}
+
+.reservation-form input {
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    padding: 10px 0px;
+    border: 0px;
+    border-bottom: 1px solid #bbbbbb;
+    font-size: 16px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    width: 100%;
+}
+
+.reservation-form input:focus {
+    outline: none;
+}
+
+.reservation-form input::placeholder {
+    color: #bbbbbb;
+}
+
+.reservation-form-general-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.reservation-form-general-info div{
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form-general-info div:first-child {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.reservation-form-general-info div:last-child {
+    width: 50%;
+}
+
+input[type=submit] {
+    display: block;
+    width: 200px;
+    border: 0px;
+    background-color: #404040;
+    color: white;
+    font-weight: 500;
+    padding: 13px 20px;
+    text-align: center;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.restaraunt-map-img {
+    display: flex;
+    justify-content: center;
+}
+
+.restaraunt-map-img img {
+    width: 100%;
+}
+
+.reservation-attributes {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-attributes p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.reservations div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reservations dl {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    border: solid 1px #bbbbbb;
+    padding: 10px 30px 30px;
+}
+
+.reservation-desc {
+    display: flex;
+    flex-direction: column;
+}
