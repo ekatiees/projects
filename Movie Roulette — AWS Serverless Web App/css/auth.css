@@ -1,0 +1,89 @@
+/* Main customisations */
+
+body {
+    padding: 0;
+}
+
+
+
+/* Form styles */
+
+.form-container {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-inner-container {
+    width: 30%;
+    min-width: 300px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+
+
+/* Header */
+
+.form-header {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.form-header h1, .form-header a {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    width: 50%;
+}
+
+h1 {
+    color: #ffd700;
+}
+
+.form-header a {
+    color: rgb(130, 130, 130);
+}
+
+.form-header a:hover,
+.form-header a:active {
+    color: lightgray;
+    transition: .2s ease-in-out;
+}
+
+
+
+/* Inputs */
+
+#signinForm, #registrationForm, #verifyForm {
+    justify-content: center;
+    width: 100%;
+}
+
+#signinForm div, #registrationForm div, #verifyForm div {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#signinForm div a, #registrationForm div a, #verifyForm div a {
+    width: 37%;
+    min-width: 70px;
+}
+
+
+
+/* Buttons */
+
+input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    width: 45.2%;
+    min-width: 70px;
+}

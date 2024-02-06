@@ -1,0 +1,224 @@
+/* About the app styles */
+
+.app-info {
+    width: 70%;
+}
+
+
+
+/* Main button customisation */
+
+#getRandomMovieButton {
+    margin: 5vh 0 5vh 0;
+    width: 20%;
+    min-width: 240px;
+}
+
+
+
+/* The movie info block styles */
+
+.movie {
+    justify-content: space-between;
+}
+
+.movie-poster {
+    width: 23%;
+    margin-right: 2%;
+}
+
+.strong-heading {
+    margin-bottom: 1vh;
+}
+
+
+
+/* Save to watchlist block styles */
+
+.saveToWatchlist {
+    align-items: center;
+    justify-content: start;
+}
+
+#saveToWatchlistButton {
+    align-items: center;
+    min-width: 183px;
+}
+
+.watchlist-btn-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-image: url('../img/heart.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#saveToWatchlistButton:hover .watchlist-btn-img {
+    background-image: url('../img/heart-black.png');
+    transition: .2s ease-in-out;
+}
+
+#SaveStatus {
+    margin: 10px 0;
+    color: darkgray;
+}
+
+
+
+/* The movie info header styles */
+
+.movie-info {
+    width: 80%;
+}
+
+.movie-title {
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+.movie-year {
+    font-size: 32px;
+    color: darkgray;
+}
+
+
+
+/* The movie info characteristics styles */
+
+.movie-info-chars {
+    font-size: 20px;
+    color: lightgray;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.movie-rating-container {
+    align-items: center;
+    margin: 2vh 0 3vh;
+}
+
+.movie-genre {
+    margin: 2vh 40px 0 0;
+}
+
+.movie-rating {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+
+/* Ask AI about a movie */
+
+form {
+    margin: 40px 0 2vh;
+    flex-wrap: wrap;
+}
+
+input[type=text] {
+    width: 79%;
+    margin: 0 2% 20px 0;
+}
+
+input[type=submit] {
+    width: 17%;
+    min-width: 70px;
+}
+
+
+
+/* Media */
+
+@media (max-width: 1025px) {
+    .app-info {
+        width: 100%;
+    }
+
+    .movie {
+        flex-direction: column-reverse;
+        align-items: start;
+        border-top: 2px solid rgb(79, 79, 79);
+    }
+
+    .movie-poster {
+        width: 28%;
+        margin-right: 2%;
+    }
+
+    .movie-info {
+        width: 70%;
+    }
+}
+
+@media (max-width: 769px) {
+    .movie {
+        padding-top: 40px;
+    }
+    
+    .movie-container {
+        flex-direction: column-reverse;
+    }
+
+    .movie-poster, .movie-info {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .movie-title {
+        margin-right: 18px;
+        font-size: 36px;
+    }
+    
+    .movie-year {
+        font-size: 30px;
+    }
+
+    .saveToWatchlist {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .saveToWatchlist {
+        margin-bottom: 20px;
+    }
+
+    #SaveStatus {
+        margin: 0 20px;
+    }
+
+    #AIAnswer {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 426px) {
+    .movie-title {
+        margin-right: 15px;
+        font-size: 28px;
+    }
+    
+    .movie-year {
+        font-size: 22px;
+    }
+    
+    .movie-info-chars {
+        font-size: 18px;
+    }
+
+    .movie-rating {
+        width: 18px;
+        height: 18px;
+    }
+
+    .movie-genre {
+        margin-right: 20px;
+    }
+
+    input[type=text] {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}

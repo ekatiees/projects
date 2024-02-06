@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Movie Roulette</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/watchlist.css">
+    <link rel="icon" href="img/favicon.ico">
+
+    <script src="js/vendor/jquery-3.1.0.js"></script>
+    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+
+    <script src="js/vendor.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/cognito-auth.js"></script>
+</head>
+<body>
+
+    <div>
+        <script src="header.js"></script>
+    </div>
+
+    <div id="app">
+        <h2>My watchlist</h2>
+
+        <div id="movieList">
+            <!-- Movies will be listed here -->
+        </div>
+    
+        <div id="pagination" class="flex-row">
+            <!-- Pagination buttons will be added here -->
+        </div>
+    </div>
+
+    <script src="js/watchlist.js"></script>
+
+</body>
+</html>

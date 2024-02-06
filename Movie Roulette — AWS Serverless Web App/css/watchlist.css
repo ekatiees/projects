@@ -1,0 +1,124 @@
+/* Main customisations */
+
+h2 {
+    margin: 50px 0 30px;
+}
+
+
+
+/* Watchlist styles */
+
+.movie-watchlist {
+    margin: 0 0 30px;
+    border: 2px solid rgb(79, 79, 79);
+}
+
+.movie-watchlist-info-container {
+    width: 80%;
+    padding-top: 50px;
+}
+
+.movie-poster-watchlist {
+    width: 22%;
+    margin-right: 3%;
+}
+
+.movie-info-watchlist {
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.movie-title-watchlist {
+    margin: 0 20px 10px 0;
+    font-size: 24px;
+}
+
+.movie-year-watchlist {
+    color: darkgray;
+    font-size: 20px;
+}
+
+.movie-info-chars-watchlist {
+    flex-wrap: wrap;
+    align-items: start;
+    color: lightgray;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.movie-genre-watchlist {
+    margin: 0 20px 10px 0;
+}
+
+.movie-rating-watchlist-container {
+    align-items: start;
+}
+
+.movie-rating-watchlist-container img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+
+
+/* Remove button */
+
+.remove-button {
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+.removeFromWatchlist {
+    min-width: 110px;
+}
+
+
+
+/* Pagination */
+
+#pagination button {
+    margin-right: 10px;
+}
+
+
+
+/* Media */
+
+@media (max-width: 1025px) {
+    .movie-watchlist-info-container {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        padding: 30px 0;
+
+    }
+
+    .movie-info-watchlist {
+        width: 95%;
+    }
+
+    .remove-button {
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 769px) {
+    .movie-poster-watchlist {
+        display: none;
+    }
+
+    .movie-watchlist-info-container {
+        padding: 30px 20px;
+    }
+    .movie-info-watchlist {
+        width: 100%;
+    }
+}
+
+@media (max-width: 426px) {
+    .movie-info-chars-watchlist {
+        flex-direction: column;
+    }
+}
