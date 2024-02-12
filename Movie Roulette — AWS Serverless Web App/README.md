@@ -33,7 +33,7 @@ compile/see their watchlist.
 > * saveToWatchlist: saves a movie to the user's watchlist,
 > * getWatchlist: retrieves the user's watchlist,
 > * removeFromWatchlist: removes a movie from the user's watchlist,
-> * getAIAnswer: answers any user's question about the given movie with the help of Bard.
+> * getAIAnswer: answers any user's question about the given movie with the help of Gemini.
 
 4. The Lambda functions interact with a DynamoDB table to store and retrieve
    movie data and user watchlist data.
